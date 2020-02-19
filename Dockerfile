@@ -12,6 +12,8 @@ RUN apk add bash wget unzip ca-certificates git \
 
 RUN fc-cache -f
 
+RUN apk add php7-pdo_mysql
+
 ADD artisan.local /usr/local/bin/artisan
 ADD docker-entrypoint.sh /
 
