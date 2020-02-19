@@ -10,10 +10,12 @@ RUN apk add bash wget unzip ca-certificates git \
     ttf-liberation unifont openssl php7-pecl-apcu php7-opcache \
     php7-pecl-redis redis composer gettext
 
-RUN update-ms-fonts && fc-cache -f
+RUN fc-cache -f
 
 ADD artisan.local /usr/local/bin/artisan
+ADD docker-entrypoint.sh /
 
+RUN mkdir -p /srv/www
 WORKDIR /srv/www
 
 EXPOSE 8000
