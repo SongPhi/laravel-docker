@@ -18,7 +18,13 @@ ADD artisan.local /usr/local/bin/artisan
 ADD docker-entrypoint.sh /
 
 RUN mkdir -p /srv/www
+
 WORKDIR /srv/www
+
+COPY ./composer.json /srv/www/
+COPY ./composer.lock /srv/www/
+
+RUN composer install --no-autoloader --no-scripts --no-progress --no-suggest
 
 EXPOSE 8000
 
