@@ -8,7 +8,7 @@ RUN apk add bash wget unzip ca-certificates git \
     php7-xml php7-xsl php7-json php7-simplexml php7-tokenizer \
     php7-xmlwriter php7-fileinfo php7-ctype php7-xmlreader php7-session \
     ttf-liberation unifont openssl php7-pecl-apcu php7-opcache \
-    php7-pecl-redis redis composer gettext
+    php7-pecl-redis redis composer gettext php7-pecl-yaml
 
 RUN fc-cache -f
 
