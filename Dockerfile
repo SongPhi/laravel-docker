@@ -34,6 +34,9 @@ RUN rm -rf /var/cache/apk/*
 
 RUN mkdir -p /run/nginx && chown nginx:nginx /run/nginx
 
+RUN chown nginx:nginx /srv/www
+RUN chmod +x /srv
+
 RUN composer install --no-autoloader --no-scripts --no-progress --no-suggest
 
 EXPOSE 8000
