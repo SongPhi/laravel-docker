@@ -1,6 +1,6 @@
 {
-    "name": "bagisto/bagisto",
-    "description": "Bagisto Laravel ECommerce",
+    "name": "gaotantai/api",
+    "description": "gaotantai ecommerce",
     "keywords": [
         "framework",
         "laravel"
@@ -150,4 +150,4 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true
-  }
+}
