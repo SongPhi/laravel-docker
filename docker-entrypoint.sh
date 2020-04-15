@@ -1,7 +1,5 @@
 #!/bin/sh
 
-php artisan migrate
-
 echo "Starting up.."
 
-supervisord -c /etc/supervisord.conf
+php artisan serve --port=8000 --host="0.0.0.0" -n
